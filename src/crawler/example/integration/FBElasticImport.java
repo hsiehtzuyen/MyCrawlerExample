@@ -14,21 +14,21 @@ public class FBElasticImport {
     static String elasticPort = "9200" ;
     static String elasticIndex = "hsiehtzuyen";
     static String elasticIndexType = "data";
-    static String pageName = "edn168";
+    static String pageName = "cwgroup";
     // 2017-09-02
     static long start = 1512871743;
     // 往前抓抓取日期數
     static int days = 10;
     // 每日抓取文章上限 (上限1000)
     static int maxPosts = 10;
-    static String access_token = "EAACEdEose0cBAPEJhTMGr7bgs1gm3nFsfY7zJwGdgY2yyAGZB2SobHuPLC8TrZBI3RELGHpnp9zLTKlbp76AscDIUAajgAzE6Xb9seMzvx3AfPi0PMrLkpFFRAoEIIA2AKpIqKcGRliuUoFVRX6FhJQMRZC3blGEJ07aKWNst1HTYuwwZByXaYZBsH6luBMAZD";
+    static String access_token = "EAACEdEose0cBAEw2LTwtajD8ZBhWAzCzjZAs1pKiwEdBdqeZAgYYnFs8WfEuQKezSZAAUO6Qal99IXtaZB3fgIIIE5QhrBLVslysys973pBudnkegr4S3p1RYDpoIZBzKClcTPSv50ZB8ZAjjAznK68viiFKeVyznuE6dVn2ElfZBx7Bif0Rya63npY5qvcYZA64vysTjZAj7AOFQZDZD";
 
     public static void main(String[] args) {
 
         for (long datatime = start ; datatime > start-86400*days ;datatime-=86400) {
             String uri =
                     "https://graph.facebook.com/v2.6"
-                            + "/"+pageName +"/posts?fields=message,comments.limit(0).summary(true),likes.limit(0).summary(true),created_time&since="+(datatime-3600*8)+"&until="+datatime+"&limit="+maxPosts
+                            + "/"+pageName +"/posts?fields=message,comments.limit(0).summary(true),likes.limit(0).summary(true),created_time&since="+(datatime-3600*24)+"&until="+datatime+"&limit="+maxPosts
                             + "&access_token="+access_token;
 
 
