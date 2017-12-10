@@ -31,8 +31,6 @@ public class FBElasticImport {
                             + "/"+pageName +"/posts?fields=message,comments.limit(0).summary(true),likes.limit(0).summary(true),created_time&since="+(datatime-3600*24)+"&until="+datatime+"&limit="+maxPosts
                             + "&access_token="+access_token;
 
-
-
             try {
 
                 Elements elems =
