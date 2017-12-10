@@ -25,8 +25,8 @@ public class FacebookExam {
 
 		String uri = 
 				"https://graph.facebook.com/v2.6"
-				+ "/search?q="
-				+ "&access_token=";
+				+ "/edn168/posts?fields=id,link,message,created_time,likes.limit(0).summary(total_count),reactions.limit(0).summary(total_count)"
+				+ "&access_token=EAACEdEose0cBAPEJhTMGr7bgs1gm3nFsfY7zJwGdgY2yyAGZB2SobHuPLC8TrZBI3RELGHpnp9zLTKlbp76AscDIUAajgAzE6Xb9seMzvx3AfPi0PMrLkpFFRAoEIIA2AKpIqKcGRliuUoFVRX6FhJQMRZC3blGEJ07aKWNst1HTYuwwZByXaYZBsH6luBMAZD";
 
 
 		Elements elems =
